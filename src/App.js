@@ -3,6 +3,7 @@ import './App.css';
 import firebase from 'firebase';
 import LogIn from './Components/LogInScrenn';
 import Dashbord  from './Components/Dashbord';
+import { Provider } from 'react-redux';
 
 import {
   BrowserRouter as Router,
@@ -10,6 +11,11 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import createStore from './store/store';
+import AddBook from './Components/AddBook.js';
+import StudentList from './Components/StudenList';
+import ManageIsuue from './Components/ManageIssue';
+
 
 
 
@@ -31,13 +37,20 @@ function App() {
     firebase.app(); // if already initialized, use that one
  }
   
+ const store=createStore()
   
   return (
-     
+    <Provider store={store}>
       <Router>
+        
         <Route exact path='/' component={LogIn} />
         <Route exact path='/dashbord' component={Dashbord} />
+        <Route exact path='/userList' component={StudentList} />
+        <Route exact path='/addBook' component={AddBook} />
+        <Route exact path='/manageIssue' component={ManageIsuue} />
+        
       </Router>
+      </Provider>
      
     
       

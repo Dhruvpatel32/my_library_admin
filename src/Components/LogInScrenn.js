@@ -3,13 +3,15 @@ import {Redirect} from 'react-router-dom';
 import im from './l.png';
 import profile from './profile.png';
 import passwordimage from './password.png';
-
+import { adminLolgin } from '../Actions/adminAction';
+import {connect} from "react-redux";
 
 
 
 const LogIn =(props)=>{
     const [email,setemail] =useState('');
     const [password,setPassword]=useState('');
+    const [error,seterror]=useState('')
  
     const container={
         height:'100vh',
@@ -127,9 +129,22 @@ const LogIn =(props)=>{
                      <div style={{width:'100%',display:'flex',justifyContent:'flex-end',marginRight:'20%',marginTop:20}}>
                       <text>Forgot Password ?</text>
                   </div>
+                  {
+                      error!==''?<div>
+                          <text style={{color:'red',fontSize:12}}>{error}</text>
+                          </div>:null
+                  }
                   <div style={{display:'flex',justifyContent:'center',marginTop:20}}>
                       <button onClick={()=>{
-                          alert('hello')
+                          if(email==='')
+                            seterror('Please Enter Email')
+                          else if(password==='')
+                            seterror('Please Enter Password')  
+                          else
+                            {
+                                props.dispatch(adminLolgin({email:email,password:password,props:props}))
+                                
+                            } 
                       }} style={{borderRadius:4,border:'0 solid black',height:30,width:100,backgroundColor:'#272660',color:'white'}}>Log In</button>
                   </div>
                   </div>
@@ -138,4 +153,5 @@ const LogIn =(props)=>{
         </div> 
     )
 }
-export default LogIn
+
+export default connect()(LogIn)
