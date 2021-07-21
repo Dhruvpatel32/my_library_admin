@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import {Redirect} from 'react-router-dom';
-import im from './l.png';
-import profile from './profile.png';
-import passwordimage from './password.png';
+import im from '../photos/logo.png';
+import profile from '../photos/profile.png';
+import passwordimage from '../photos/password.png';
 import { adminLolgin } from '../Actions/adminAction';
 import {connect} from "react-redux";
 

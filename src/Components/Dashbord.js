@@ -1,6 +1,7 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom';
 import LeftContainer from './LeftContainer';
+import TopContainer from './TopContainer';
 const Dashbord =(props)=>{
    const mainConatiner={
        height:'100vh',
@@ -25,7 +26,7 @@ const Dashbord =(props)=>{
               <LeftContainer props={props}/>
           </div>
           <div style={rightContainer}>
-
+             <TopContainer/>
           </div>
         </div>
     )

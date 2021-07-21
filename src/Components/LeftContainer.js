@@ -31,7 +31,7 @@ const LeftContainer =(props)=>{
               <img style={{height:20,width:20,margin:20}} src={location==='/addBook'?addBook_black:addBook} alt="l"></img>
               </div>
               <div style={{margin:20}}>
-                <Link style={{ textDecoration: 'none',color:'white'}} to="/addBook">Add Book</Link>
+                <Link style={location==='/addBook'?{ textDecoration: 'none',color:'black'}:{textDecoration: 'none',color:'white'}} to="/addBook">Add Book</Link>
               </div>
            </div>
            <div style={location==='/manageIssue'?{display:'flex',flexDirection:'row',backgroundColor:'white',paddingLeft:'10%'}:{display:'flex',flexDirection:'row',paddingLeft:'10%'}}>
@@ -39,7 +39,7 @@ const LeftContainer =(props)=>{
               <img style={{height:20,width:20,margin:20}} src={location==='/manageIssue'?ManageIssue_black:ManageIssue} alt="l"></img>
               </div>
               <div style={{margin:20}}>
-                <Link style={{ textDecoration: 'none',color:'white'}} to="/manageIssue">Manage Issue Request</Link>
+                <Link style={location==='/manageIssue'?{textDecoration: 'none',color:'black'}:{ textDecoration: 'none',color:'white'}} to="/manageIssue">Manage Issue Request</Link>
               </div>
            </div>
            <div style={location==='/userList'?{display:'flex',flexDirection:'row',backgroundColor:'white',paddingLeft:'10%'}:{display:'flex',flexDirection:'row',paddingLeft:'10%'}}>
@@ -47,7 +47,7 @@ const LeftContainer =(props)=>{
               <img style={{height:20,width:20,margin:20}} src={location==='/userList'?UserList_black:UserList} alt="l"></img>
               </div>
               <div style={{margin:20}}>
-                <Link style={{ textDecoration: 'none',color:'white'}} to="/userList">Student List</Link>
+                <Link style={location==='/userList'?{textDecoration: 'none',color:'black'}:{ textDecoration: 'none',color:'white'}} to="/userList">Student List</Link>
               </div>
            </div>
            <div style={{display:'flex',flexDirection:'row',paddingLeft:'10%'}}>
