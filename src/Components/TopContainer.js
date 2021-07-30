@@ -9,7 +9,7 @@ const TopContainer =(props)=>{
    const [faculty,setFaculty]=useState();
     const mainConatiner={
         display:'flex',
-        borderBottom: "1px solid lightgrey",
+        borderBottom: "1vh solid lightgrey",
         height:'10vh',
         justifyContent:'flex-end',
         alignItems:'center'

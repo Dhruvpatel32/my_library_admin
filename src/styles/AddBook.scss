@@ -1,0 +1,32 @@
+.input{
+    border-width: 0;
+    background-color: #F1F1F1;
+    width:20vw;
+    height:4vh;
+    border-radius: 5px;
+}
+.input:focus{
+    outline-color: transparent;
+    outline-style: none;
+    background-color: #F1F1F1;
+    width:20vw;
+    height:4vh;
+    border-radius: 5px;
+}
+.input2{
+    border-width: 0;
+    background-color: #F1F1F1;
+    height:20vh;
+    width:20vw;
+    border-radius: 5px;
+    
+    
+}
+.input2:focus{
+    outline-color: transparent;
+    outline-style: none;
+    background-color: #F1F1F1;
+    height:20vh;
+    width:20vw;
+    border-radius: 5px;
+}
